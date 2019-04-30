@@ -22,5 +22,5 @@ RUN $GIT clone https://github.com/Broadway33/LightLDA
 WORKDIR /LightLDA
 RUN bash build.sh
 
-WORKDIR /LightLDA/example/
-RUN bash nytimes.sh
+WORKDIR /LightLDA/example
+ENTRYPOINT ["bash", "./nytimes.sh"]
